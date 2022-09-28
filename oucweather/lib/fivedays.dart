@@ -78,24 +78,39 @@ class OneDayCard extends StatelessWidget {
                 width: 360,
                 // 縦幅
                 height: 100,
-                color: Color.fromARGB(255, 141, 255, 240),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+    gradient: LinearGradient(
+      begin: FractionalOffset.topLeft,
+      end: FractionalOffset.bottomRight,
+      colors: [
+        Color.fromARGB(255, 1, 254, 170).withOpacity(0.6),
+        Color.fromARGB(255, 0, 136, 255).withOpacity(0.6),
+      ],
+      stops: const [
+        0.0,
+        1.0,
+      ],
+    ),
+  ),
+  
                 margin: EdgeInsets.all(10),
                 child: FittedBox(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text ("1日（木）", style: TextStyle(fontSize: 15,color: Color.fromARGB(255, 104, 103, 103))),
+                      Text ("1日（木）", style: TextStyle(fontSize: 30,color: Color.fromARGB(255, 104, 103, 103))),
                       Row(mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
-                          Text ("${Options.getWeatherName(weath)}", style: TextStyle(fontSize: 15,color: Color.fromARGB(255, 104, 103, 103))),
+                          Text ("${Options.getWeatherName(weath)}", style: TextStyle(fontSize: 30,color: Color.fromARGB(255, 104, 103, 103))),
                           Padding(padding: EdgeInsets .only (left:15)),
-                          Text ("${maxtemperature}°", style: TextStyle(fontSize: 15,color: Colors.red)),
+                          Text ("${maxtemperature}°", style: TextStyle(fontSize: 30,color: Colors.red)),
                           Text ("/", style: TextStyle(fontSize: 15,color: Color.fromARGB(255, 104, 103, 103))),
-                          Text ("${mintemperature}°", style: TextStyle(fontSize: 15,color: Colors.blue)),
+                          Text ("${mintemperature}°", style: TextStyle(fontSize: 30,color: Colors.blue)),
                           Padding(padding: EdgeInsets .only (left:15)),
                           Row(mainAxisAlignment: MainAxisAlignment.start,
                             children: <Widget>[
-                              Text ("${humidity}％", style: TextStyle(fontSize: 15,color: Color.fromARGB(255, 104, 103, 103))), 
+                              Text ("${humidity}％", style: TextStyle(fontSize: 30,color: Color.fromARGB(255, 104, 103, 103))), 
                               Padding(padding: EdgeInsets .only (left:90)),
                               /*
                               Icon(Icons.sunny_snowing,size: 60,color: Colors.white,),

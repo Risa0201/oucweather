@@ -74,6 +74,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 // 縦幅
                 height: 350,
               decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
+      topRight: Radius.circular(50),
+    ),
+    
     gradient: LinearGradient(
       begin: FractionalOffset.topLeft,
       end: FractionalOffset.bottomRight,
@@ -136,6 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 // 縦幅
                 height: 100,
               decoration: BoxDecoration(
+                 borderRadius: BorderRadius.circular(10),
     gradient: LinearGradient(
       begin: FractionalOffset.topLeft,
       end: FractionalOffset.bottomRight,
@@ -149,6 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ],
     ),
   ),
+  
               margin: EdgeInsets.all(10),
               child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
